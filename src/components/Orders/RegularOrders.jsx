@@ -9,11 +9,11 @@ const RegularOrders = () => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Customer Name</th>
-            <th scope="col">Product Name</th>
+            <th scope="col">Product</th>
             <th scope="col">Price</th>
             <th scope="col">Delivery</th>
+            <th scope="col">Address</th>
           </tr>
         </thead>
         <tbody>
@@ -21,11 +21,18 @@ const RegularOrders = () => {
             .filter((order) => order.deliveryOption === "Regular Deliver")
             .map((order, i) => (
               <tr key={i}>
-                <th scope="row">{i}</th>
                 <td>{order.customerName}</td>
-                <td>{order.productName}</td>
+                <td className="d-flex align-items-center gap-3">
+                  <img
+                    style={{ width: "40px", height: "40px" }}
+                    src={order.image}
+                    alt=""
+                  />
+                  <span>{order.productName}</span>
+                </td>
                 <td>{order.price}</td>
                 <td>{order.deliveryOption}</td>
+                <td>{order.customerAddress}</td>
               </tr>
             ))}
         </tbody>

@@ -7,45 +7,41 @@ const Pagination = ({
 }) => {
   console.log(collectionArray);
   return (
-    <div>
-      <nav aria-label="Page navigation example">
-        <ul className="pagination">
-          <li className="page-item">
-            <span
-              className="page-link"
-              onClick={() => selectPageHandler(page - 1)}
-            >
-              Previous
-            </span>
-          </li>
-          {[
-            ...Array(
-              Math.ceil(collectionArray.length) / numberOfElementPerPage
-            ),
-          ]?.map((_, i) => {
+    <nav aria-label="Page navigation example">
+      <ul className="pagination">
+        <li className="page-item">
+          <span
+            className="page-link"
+            onClick={() => selectPageHandler(page - 1)}
+          >
+            Previous
+          </span>
+        </li>
+        {[...Array(Math.ceil(orders?.length / numberOfElementPerPage))]?.map(
+          (_, i) => {
             return (
-              <li
-                key={i}
-                onClick={() => selectPageHandler(i + 1)}
-                className="page-item"
-              >
-                <a className="page-link" href="#">
+              <li key={i} className="page-item">
+                <span
+                  onClick={() => selectPageHandler(i + 1)}
+                  className="page-link"
+                >
                   {i + 1}
-                </a>
+                </span>
               </li>
             );
-          })}
-          <li className="page-item">
-            <span
-              className="page-link"
-              onClick={() => selectPageHandler(page + 1)}
-            >
-              Next
-            </span>
-          </li>
-        </ul>
-      </nav>
-    </div>
+          }
+        )}
+
+        <li className="page-item">
+          <span
+            className="page-link"
+            onClick={() => selectPageHandler(page + 1)}
+          >
+            Next
+          </span>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
