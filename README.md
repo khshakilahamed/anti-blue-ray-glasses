@@ -4,6 +4,8 @@
 
 ## Data collected from [lunettes.com.bd](https://lunettes.com.bd/)
 
+## API- FakeData
+
 ## Packages-
 
 ### 1. React-router-dom
@@ -12,12 +14,10 @@
 
 ## Hooks-
 
-### 2. useEffect
-
-### 2. useEffect
-
 ### 1. useState
+
+### 2. useEffect
 
 ### 3. useReducer
 
-### 3. contextAPI
+### 4. contextAPI
