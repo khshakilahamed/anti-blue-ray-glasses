@@ -10,8 +10,6 @@
 
 ### 1. React-router-dom
 
-### 2. Bootstrap
-
 ## Hooks-
 
 ### 1. useState
